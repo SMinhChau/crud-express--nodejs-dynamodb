@@ -346,3 +346,11 @@ app.post(
   </div>
   <% }) %> <% } %>
   ```
+  ```html
+  <td scope="row"><%= papers[i].gender == 'true' ? 'Nam' : 'Nu' %></td>
+  ```
+  ```html
+  <input type="radio" name="gender" id="genderMale" value="true" > Female
+  <input type="radio" name="gender" id="genderFemale" value="false"> Male
+  ```
+  
