@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+    crossorigin="anonymous"
+    />
+</head>
+<style>
+    .container{
+    width: 80%;
+    margin-top: 20px;
+    }
+</style>
+<body>
+    <div class="container">
+        <% if(typeof alert !='undefined' ) {%> <% alert.forEach(function(errors){
+            %>
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+              <%= errors.msg %>
+            </div>
+            <% }) %> <% } %>
+    <form action="/add" method="post">
+        <h3 class="text-center">Thêm mới 01 bài báo</h3>
+        <div class="mb-3 row justify-content-md-center">
+        <label for="lable" class="form-label">id:</label>
+        <input type="text" name="id" class="form-control" id="ma_sp" />
+        <label for="lable" class="form-label">Tên bài báo:</label>
+        <input type="text" name="actor" class="form-control" id="ma_sp" />
+
+        <label for="lable" class="form-label">	Tên nhóm tác giả: </label>
+        <input
+            type="text"
+            name="group_actor"
+            class="form-control"
+        />
+
+        <label for="lable" class="form-label">Chỉ số BSIN: </label>
+        <input
+            type="number"
+            name="isbn"
+            class="form-control"
+        />
+
+        <label for="lable" class="form-label">Số trang: </label>
+        <input
+            type="number"
+            name="page_number"
+            class="form-control"
+        />
+        <label for="lable" class="form-label">	Năm xuất bản: </label>
+        <input
+            type="number"
+            name="year"
+            class="form-control"
+        />
+        <div class="d-flex flex-row-reverse bd-highlight ">
+            <input  class="btn btn-primary col-1 mt-3" type="submit" value="Thêm">
+        </div>
+        </div>
+    </form>
+    </div>
+    </div>
+</body>
+</html>
